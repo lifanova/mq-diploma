@@ -19,19 +19,25 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;  
 }
 
 .banner {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-color: #000000;
   color: #fff;
+
   width: 100%;
   height: 100vh;
+
   position: relative;
   z-index: 0;
 }
@@ -59,12 +65,15 @@ body {
 }
 
 .main-title {  
+  font-size: 4.5rem;
   font-weight: 700;
+  line-height: 7.5rem;
   text-transform: uppercase;
   color: #fff;
 }
 
 .title {  
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
@@ -662,8 +671,142 @@ a.soc-link:hover > .soc-tooltip {
   text-decoration: underline;
 }
 
+
+/* Modal window */
+.modal {
+  visibility: hidden;
+  position: fixed;
+  
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* overlay */
+.modal::after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.modal-wrapper { 
+  max-width: 380px;
+  max-height: 600px;
+  background-color: #fff;
+  margin: auto;
+
+  position: relative;
+}
+
+.modal-close {
+  width: 20px;
+  height: 20px;
+  background-image: url(../svg/form-x.svg);
+  background-color: transparent;
+
+  position: absolute;
+  top: -25px;
+  right: 0;    
+}
+
+.feedback-form {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 28px;
+  margin-bottom: 52px;
+}
+
+.feedback-question {
+  font-size: 13px;
+  /*line-height: 40px;*/
+  color: #0f0d0e;
+  margin-bottom: 5px;
+}
+
+.feedback-list {
+  background-image: url(../svg/form-arrows.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.feedback-radio-item {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.feedback-radio-answer {     
+  font-size: 13px; 
+  color: #0f0d0e
+
+  margin-bottom: 5px;
+}
+
+.feedback-radio-answer::after {
+  content: "";
+  background-image: url(../svg/form-empty-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;  
+   
+  margin-right: 8px;
+}
+
+.feedback-radio-item:checked ~ .feedback-radio-answer::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background-image: url(../svg/form-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+
+  margin-right: 8px;
+}
+
+.feedback-area {
+  width: 100%;
+  height: 130px;
+  background-color: #f4f7f6;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.feedback-button {
+  width: 100%;  
+  height: 48px;
+  font-size: 14px;
+  font-weight: 700;  
+  text-transform: uppercase;
+
+  background-color: #b59f5b;
+  color: #fff;
+
+  margin-top: 18px;
+}
+
 /* Mobile */
-@media (max-width:640px) {
+@media (max-width: 640px) {
+  html {
+    font-size: 8px;
+  }
+
   .banner {
     background-image: url(../img/banner-mobile.jpg);
   }
@@ -682,8 +825,8 @@ a.soc-link:hover > .soc-tooltip {
   }
 
   .logo-img {
-    /*width: 270px;  */
-    width: 75vw;
+    width: 270px;  
+    /*width: 75vw;*/
   }
 
   .nav {
@@ -697,12 +840,12 @@ a.soc-link:hover > .soc-tooltip {
   }
 
   .main-title {
-    font-size: 26px;
-    line-height: 36px;
+    /*font-size: 26px;
+    line-height: 36px;*/
   }
 
   .title {
-    font-size: 16px;
+    /*font-size: 16px;*/
   }
 
   /* trends */
@@ -715,19 +858,16 @@ a.soc-link:hover > .soc-tooltip {
     margin-bottom: 0;
   }
 
-  /* main */
-  .main-container {
-
-    /* Ничего не делаем, т.к. main & aside блочные */
-  }
+  /* main */  
 
   /* products*/
-  .products-container {    
-  }
-
   .product-card {
     width: 100%;
     margin-bottom: 24px;
+  }
+
+  .modal-wrapper > h3.title {
+    margin-top: 28px;
   }
 
 }
@@ -757,6 +897,10 @@ a.soc-link:hover > .soc-tooltip {
 
 /* Tablet */
 @media (min-width:641px) and (max-width:1200px) {
+  html {
+    font-size: 9px;
+  }
+
   .banner {
     background-image: url(../img/banner-bg-tablet.jpg);
   }
@@ -770,9 +914,8 @@ a.soc-link:hover > .soc-tooltip {
   }
 
   .logo-img {
-
-    /*width: 179px;  */
-    width: 50vw;
+    width: 179px;  
+    /*width: 50vw;*/
   }
 
   .nav {
@@ -783,13 +926,19 @@ a.soc-link:hover > .soc-tooltip {
     display: block;
   }
 
+  .main-title-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 102px;
+  }
+
   .main-title {
-    font-size: 40px;
-    line-height: 55px;
+    /*font-size: 40px;
+    line-height: 55px;*/
   }
 
   .title {
-    font-size: 18px;
+    /*font-size: 18px;*/
   }
 
   .trends-container {
@@ -832,10 +981,19 @@ a.soc-link:hover > .soc-tooltip {
     margin-right: 22px;
   }
 
+  .modal-wrapper > h3.title {
+    margin-top: 54px;
+  }
 }
 
 /* Tablet & landscape orientation */
 @media (min-width:641px) and (max-width:1200px) and (orientation:landscape) {
+  .main-title-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 102px;    
+  }
+
   .trends-container {
     display: flex;
     flex-wrap: wrap;
@@ -875,8 +1033,11 @@ a.soc-link:hover > .soc-tooltip {
 
 /* Desktop */
 @media (min-width:1201px) {
-  .wrapper {
+  html {
+    font-size: 10px;
+  }
 
+  .wrapper {
     /* 1660 - 2 * 230 */
     max-width: 1200px;
   }
@@ -894,9 +1055,8 @@ a.soc-link:hover > .soc-tooltip {
   }
 
   .logo-img {
-
-    /*width: 179px;  */
-    width: 50vw;
+    width: 179px;  
+    /*width: 50vw;*/
   }
 
   .nav {
@@ -931,13 +1091,19 @@ a.soc-link:hover > .soc-tooltip {
     display: none;
   }
 
+   .main-title-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 102px;    
+  }
+
   .main-title {
-    font-size: 45px;
-    line-height: 75px;
+   /* font-size: 45px;
+    line-height: 75px;*/
   }
 
   .title {
-    font-size: 20px;
+    /*font-size: 20px;*/
   }
 
   .trends-container {
@@ -999,6 +1165,10 @@ a.soc-link:hover > .soc-tooltip {
 
   .product-card:last-child {
     margin-right: 0;
+  }
+
+   .modal-wrapper > h3.title {
+    margin-top: 54px;    
   }
 
 }
