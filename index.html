@@ -358,10 +358,10 @@
 						<div class="short-post-info">
 							<time class="post-date" datetime="2019-06-14">14 июня 2019</time>
 
-							<h3 class="short-post-title">
+							<h4 class="short-post-title">
 								<a href="#0">
 								10 мест, ради которых стоит проснуться на рассвете	</a>
-							</h3>
+							</h4>
 						</div>
 
 					</article>
@@ -375,10 +375,10 @@
 						<div class="short-post-info">
 							<time class="post-date" datetime="2019-06-14">14 июня 2019</time>
 
-							<h3 class="short-post-title">
+							<h4 class="short-post-title">
 								<a href="#0">
 								Йога для домашних</a>
-							</h3>
+							</h4>
 						</div>
 
 					</article>
@@ -392,10 +392,10 @@
 						<div class="short-post-info">
 							<time class="post-date" datetime="2019-06-14">14 июня 2019</time>
 
-							<h3 class="short-post-title">
+							<h4 class="short-post-title">
 								<a href="#0">
 								как мы превратили классное место в балкон</a>
-							</h3>
+							</h4>
 						</div>
 
 					</article>
@@ -409,10 +409,10 @@
 						<div class="short-post-info">
 							<time class="post-date" datetime="2019-06-14">14 июня 2019</time>
 
-							<h3 class="short-post-title">
+							<h4 class="short-post-title">
 								<a href="#0">
 								Кулинарный подход к науке</a>
-							</h3>
+							</h4>
 						</div>
 
 					</article>
@@ -426,10 +426,10 @@
 						<div class="short-post-info">
 							<time class="post-date" datetime="2019-06-14">14 июня 2019</time>
 
-							<h3 class="short-post-title">
+							<h4 class="short-post-title">
 								<a href="#0">
 								лучшие прически для распущенных волос</a>
-							</h3>
+							</h4>
 						</div>
 
 					</article>
@@ -523,7 +523,7 @@
 	<div class="products">
 		<h3 class="title">Наши изделия</h3>
 
-		<div class="products-container">
+		<div class="products-container wrapper">
 			<div class="product-card">
 				<div class="product-preview">
 					<picture>
@@ -657,46 +657,53 @@
 		</div>
 	</footer>
 
-<div class="modal">
-	<div class="modal-wrapper">
-		<button class="modal-close" type="button"></button>
+	<div class="modal-window">		
+		<div class="modal-wrapper">
+			<div class="modal-header">
+				<div class="modal-title"></div>
 
-		<h3 class="title">Ваш фидбек</h3>
+				<i class="modal-close" onclick=""></i>		
+			</div>
 
-		<form class="feedback-form">
-			<p class="feedback-question">Как часто вы заходите на сайт?</p>
+			<div class="modal-body">		
 
-			<label>
-				<select class="feedback-list">
-					<option>Редко</option>
-					<option>Раз в неделю</option>
-					<option selected="">Почти каждый день</option>
-					<option>Каждый день</option>
-				</select>
-			</label>
+				<h3 class="title">Ваш фидбек</h3>
 
-			<p class="feedback-question">Вы подписаны на e-mail рассылку?</p>
-			
-			<label>
-				<input class="feedback-radio-item" type="radio">
-				<span class="feedback-radio-answer">Да</span>
-			</label>
+				<form class="feedback-form">
+					<p class="feedback-question">Как часто вы заходите на сайт?</p>
 
-			<label>
-				<input class="feedback-radio-item" type="radio">
-				<span class="feedback-radio-answer">Нет</span>
-			</label>
-			
-			<p class="feedback-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
+					<label>
+						<select class="feedback-list">
+							<option>Редко</option>
+							<option>Раз в неделю</option>
+							<option selected="">Почти каждый день</option>
+							<option>Каждый день</option>
+						</select>
+					</label>
 
-			<label>				
-				<textarea class="feedback-area" placeholder="Может, больше рецептов?"></textarea>
-			</label>
+					<p class="feedback-question">Вы подписаны на e-mail рассылку?</p>
 
-			<button class="feedback-button">Отправить</button>
-		</form>
+					<label>
+						<input class="feedback-radio-item" type="radio" checked>
+						<span class="feedback-radio-answer">Да</span>
+					</label>
+
+					<label>
+						<input class="feedback-radio-item" type="radio">
+						<span class="feedback-radio-answer">Нет</span>
+					</label>
+
+					<p class="feedback-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
+
+					<label>				
+						<textarea class="feedback-area" placeholder="Может, больше рецептов?"></textarea>
+					</label>
+
+					<button class="feedback-button">Отправить</button>
+				</form>
+			</div>
+		</div>		
 	</div>
-</div>
 
 
 </body>
