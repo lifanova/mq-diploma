@@ -619,31 +619,31 @@
 
 			<ul class="social">
 				<li>
-					<a href="#0"target="_blank"class="soc-link soc-twitter">
+					<a href="#0" target="_blank" class="soc-link soc-twitter">
 						<span class="tooltip soc-tooltip">Twitter</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="#0"target="_blank"class="soc-link soc-pinterest">
+					<a href="#0" target="_blank" class="soc-link soc-pinterest">
 						<span class="tooltip soc-tooltip">Pinterest</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="#0"target="_blank"class="soc-link soc-facebook">
+					<a href="#0" target="_blank" class="soc-link soc-facebook">
 						<span class="tooltip soc-tooltip">Facebook</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="#0"target="_blank"class="soc-link soc-instagram">
+					<a href="#0" target="_blank" class="soc-link soc-instagram">
 						<span class="tooltip soc-tooltip">Instagram</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="#0"target="_blank"class="soc-link soc-tumblr">
+					<a href="#0" target="_blank" class="soc-link soc-tumblr">
 						<span class="tooltip soc-tooltip">Tumblr</span>
 					</a>
 				</li>
@@ -670,10 +670,11 @@
 				<h3 class="title">Ваш фидбек</h3>
 
 				<form class="feedback-form">
-					<p class="feedback-question">Как часто вы заходите на сайт?</p>
-
+					
 					<label>
-						<select class="feedback-list">
+						<span class="feedback-question">Как часто вы заходите на сайт?</span>
+
+						<select class="feedback-list" >
 							<option>Редко</option>
 							<option>Раз в неделю</option>
 							<option selected="">Почти каждый день</option>
@@ -681,21 +682,21 @@
 						</select>
 					</label>
 
-					<p class="feedback-question">Вы подписаны на e-mail рассылку?</p>
-
+					<div class="feedback-radio-label">
 					<label>
-						<input class="feedback-radio-item" type="radio" checked>
+						<span class="feedback-question">Вы подписаны на e-mail рассылку?</span> 
+
+						<input class="feedback-radio-item" type="radio" name="subscribed" value="true" checked>
 						<span class="feedback-radio-answer">Да</span>
-					</label>
+
+						<input class="feedback-radio-item" type="radio" name="subscribed" value="false">
+						<span class="feedback-radio-answer">Нет</span>
+					</label> 
+					</div>					
 
 					<label>
-						<input class="feedback-radio-item" type="radio">
-						<span class="feedback-radio-answer">Нет</span>
-					</label>
+						<span class="feedback-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>	
 
-					<p class="feedback-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
-
-					<label>				
 						<textarea class="feedback-area" placeholder="Может, больше рецептов?"></textarea>
 					</label>
 

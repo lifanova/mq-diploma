@@ -483,7 +483,7 @@ body {
   top: -60px;
   left: 0;
   right: 0;
-  bootom: 0;
+  bottom: 0;
   width: 100%;
   height: calc(100% + 60px);
   z-index: -1;
@@ -619,13 +619,13 @@ a.soc-link:hover > .soc-tooltip {
 
 /* Modal window */
 .modal-window {
-  visibility: hidden;
+  /*visibility: hidden;*/
   position: fixed; 
   top: 0;
   left: 0;
   z-index: 1;
   width: 100%; 
-  height: 100%; 
+  height: 100vh; 
   overflow: auto; 
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.8); 
@@ -680,11 +680,10 @@ a.soc-link:hover > .soc-tooltip {
 }
 
 .feedback-question {
+  display: block;
   font-size: 13px;
   /*line-height: 40px;*/
-  color: #0f0d0e;
-
-  margin-bottom: 12px;
+  color: #0f0d0e;  
 }
 
 .feedback-list {
@@ -696,18 +695,24 @@ a.soc-link:hover > .soc-tooltip {
 
   -webkit-appearance: none;
   -moz-appearance: none;
-  pointer-events: none
+  pointer-events: none;
   cursor: pointer;
 
   max-width: 280px;
   width: 100%;
   /*height: 48px;*/
-  height: 9%;
+  /*height: 9%;*/
 
-  /*margin-bottom: 35px;*/
-  margin-bottom: 6%;
+  padding: 18px 14px;
+  margin-top: 12px;
+  /*margin-bottom: 33px;*/
+  margin-bottom: 4%;
 }
 
+.feedback-radio-label {
+   margin-top: 13px;
+   margin-bottom: 30px;
+}
 
 .feedback-radio-item {
   -webkit-appearance: none;
@@ -715,8 +720,7 @@ a.soc-link:hover > .soc-tooltip {
    /*pointer-events: none
    cursor: pointer; 
 */
-  width: 25px;
-  height: 25px;
+  vertical-align: middle; 
 
   background-image: url(../svg/form-empty-circle.svg);
   background-repeat: no-repeat;
@@ -724,73 +728,59 @@ a.soc-link:hover > .soc-tooltip {
   background-size: 25px;
 }
 
-.feedback-radio-item:checked { 
-  
+.feedback-radio-item:checked {   
   background-image: url(../svg/form-circle.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25px;
-
-  margin-right: 8px;
+  background-size: 25px; 
 }
 
 .feedback-radio-answer {
   font-size: 13px;
   color: #0f0d0e;
 
-  /*margin-bottom: 33px;*/
-}
+  vertical-align: middle;
 
-/*.feedback-radio-answer::before {
-  content: "";
-  display: block;
-  width: 25px;
-  height: 25px;
-
-  background-image: url(../svg/form-empty-circle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25px;
-
-  margin-right: 8px;
-  cursor: pointer;  
-}*/
-
-.feedback-radio-item:checked ~ .feedback-radio-answer::before {
-  content: "";
-  /*display: inline-block;
-  vertical-align: middle;*/
-  
-  background-image: url(../svg/form-circle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25px;
-
-  margin-right: 8px;
+  margin-right: 32px;
 }
 
 .feedback-area {
   width: 100%;
-  height: 130px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 130px;
+  max-height: 130px;
   /*height: 24%;*/
   background-color: #f4f7f6;
 
   -webkit-appearance: none;
   -moz-appearance: none;
+  resize: none;
+  overflow: auto;
+  outline: none;
 
-  /*margin-bottom: 32px;*/
-  margin-bottom: 6%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+
+  padding: 22px 20px;
+
+  margin-top: 12px;
+  /*margin-bottom: 27px;*/
+  margin-bottom: 4%;
 }
 
 .feedback-button {
   width: 100%;
-  height: 48px;
-  /*height: 9%;*/
+  /*height: 48px;*/
+ 
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   background-color: #b59f5b;
   color: #fff;  
+
+  padding-top:  18px;
+  padding-bottom: 18px;
 }
 
 /* Mobile */
@@ -1046,10 +1036,28 @@ a.soc-link:hover > .soc-tooltip {
 
   .modal-wrapper {  
     width: 96%;
-    height: 98%;
+    height: 100%;
   }
 
-  
+  .modal-close {
+    width: 20px;
+    height: 20px; 
+    background-size: 20px;
+  }
+
+  .feedback-radio-item {      
+    width: 25px;
+    height: 25px;
+
+    background-size: 25px;
+  }
+
+  .feedback-radio-item:checked {      
+    width: 25px;
+    height: 25px;
+
+    background-size: 25px;
+  }
 
 }
 
@@ -1344,8 +1352,24 @@ a.soc-link:hover > .soc-tooltip {
     padding-top: 15px;  
   }
 
-  .modal-wrapper > h3.title {
-    margin-top: 54px;
+  .modal-close {
+    width: 20px;
+    height: 20px; 
+    background-size: 20px;
+  }
+
+  .feedback-radio-item {      
+    width: 25px;
+    height: 25px;
+
+    background-size: 25px;
+  }
+
+  .feedback-radio-item:checked {      
+    width: 25px;
+    height: 25px;
+
+    background-size: 25px;
   }
 
 }
@@ -1654,4 +1678,23 @@ a.soc-link:hover > .soc-tooltip {
     margin-top: 54px;
   }
 
+  .modal-close {
+    width: 16px;
+    height: 16px; 
+    background-size: 16px;
+  }
+
+  .feedback-radio-item {      
+    width: 18px;
+    height: 18px;
+
+    background-size: 18px;
+  }
+
+  .feedback-radio-item:checked {      
+    width: 18px;
+    height: 18px;
+
+    background-size: 18px;
+  }
 }
